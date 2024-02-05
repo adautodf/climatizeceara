@@ -66,14 +66,6 @@
               <div class="name">
                 <div data-cy="biosite-name" class="content ">Climatize Ceará</div>
               </div>
-              <!-- Google tag (gtag.js) -->
-              <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11484304894"></script>
-              <script>
-                window.dataLayer = window.dataLayer || [];
-                function gtag() { dataLayer.push(arguments); }
-                gtag('js', new Date());
-                gtag('config', 'AW-11484304894');
-              </script>
               <div class="bio">
                 <div data-cy="biosite-description" class="content">locação de climatizadores em todo o ceará</div>
               </div>
@@ -116,12 +108,36 @@
           <section>
             <a class="linksss"
               href="https://api.whatsapp.com/send/?phone=5585992935172&text=Gostaria+de+um+or%C3%A7amento+de+climatizadores&type=phone_number&app_absent=0"
-              target="_blank">
+              target="_blank"
+              onclick="handleClick()">
               Consultora Marcelle
             </a>
+            <script>
+              function handleClick(event) {
+                // Coloque aqui o código do Google Tag Manager que você deseja disparar
+                function gtag_report_conversion(url) {
+                  var callback = function () {
+                    if (typeof (url) != 'undefined') {
+                      window.location = url;
+                    }
+                  };
+                  gtag('event', 'conversion', {
+                    'send_to': 'AW-11484304894/jJSnCMb9qY8ZEP6rkuQq',
+                    'value': 1.0,
+                    'event_callback': callback
+                  });
+                  return false;
+                }
+                // Por fim, redirecione o usuário para o link original do <a href>
+                setTimeout(() => {
+                  window.location.href = "https://api.whatsapp.com/send/?phone=5585992935172&text=Gostaria+de+um+or%C3%A7amento+de+climatizadores&type=phone_number&app_absent=0";
+                }, 200); // Tempo de espera para garantir que o Google Tag seja acionado antes do redirecionamento
+              }
+            </script>
             <a class="linksss"
               href="https://api.whatsapp.com/send?phone=5585996038903&text=Gostaria%20de%20um%20or%C3%A7amento"
-              target="_blank">
+              target="_blank"
+              onclick="handleClick()">
               Consultor Marcelo
             </a>
             <a class="linksss" href="https://www.instagram.com/climatize.ceara/" target="_blank">
