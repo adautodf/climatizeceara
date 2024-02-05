@@ -13,6 +13,22 @@
           'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-T97DT8CG');</script>
   <!-- End Google Tag Manager -->
+  <script>
+    function gtag_report_conversion(url) {
+                  var callback = function () {
+                    if (typeof (url) != 'undefined') {
+                      window.location = url;
+                    }
+                  };
+                  gtag('event', 'conversion', {
+                    'send_to': 'AW-11484304894/jJSnCMb9qY8ZEP6rkuQq',
+                    'value': 1.0,
+                    'event_callback': callback
+                  });
+                  return false;
+                }
+  </script>
+
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link href="css/biosite.css" rel="stylesheet">
   <title data-react-helmet="true">Climatize Ceará</title>
@@ -109,31 +125,13 @@
             <a class="linksss"
               href="https://api.whatsapp.com/send/?phone=5585992935172&text=Gostaria+de+um+or%C3%A7amento+de+climatizadores&type=phone_number&app_absent=0"
               target="_blank"
-              onclick="handleClick(event)">
+              onclick="return gtag_report_conversion('https://api.whatsapp.com/send/?phone=5585992935172&text=Gostaria+de+um+or%C3%A7amento+de+climatizadores&type=phone_number&app_absent=0')">
               Consultora Marcelle
             </a>
-            <script>
-              function handleClick(event) {
-                // Coloque aqui o código do Google Tag Manager que você deseja disparar
-                function gtag_report_conversion(url) {
-                  var callback = function () {
-                    if (typeof (url) != 'undefined') {
-                      window.location = url;
-                    }
-                  };
-                  gtag('event', 'conversion', {
-                    'send_to': 'AW-11484304894/jJSnCMb9qY8ZEP6rkuQq',
-                    'value': 1.0,
-                    'event_callback': callback
-                  });
-                  return false;
-                }
-
-              }
-            </script>
             <a class="linksss"
               href="https://api.whatsapp.com/send?phone=5585996038903&text=Gostaria%20de%20um%20or%C3%A7amento"
-              target="_blank" onclick="handleClick()">
+              target="_blank"
+              onclick="return gtag_report_conversion('https://api.whatsapp.com/send?phone=5585996038903&text=Gostaria%20de%20um%20or%C3%A7amento')">
               Consultor Marcelo
             </a>
             <a class="linksss" href="https://www.instagram.com/climatize.ceara/" target="_blank">
